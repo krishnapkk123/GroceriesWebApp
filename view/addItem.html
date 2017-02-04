@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="col-xs-12">
+
+    <div class="jumbotron">
+  <h1><center>Add Your Items Here</center> </h1>
+    </div>
+
+
+  <form name="ginput">
+  <div class ="form-group">
+    <input type="text" class="form-control text-center clearfix" placeholder="Grocerie name" ng-model ="grocerieItems.itemName"  >
+
+  </div>
+    <div class="form-group">
+       
+      <a href="#/" type="button" type="button" class="btn btn-success btn-lng btn-block pull-left" ng-click="save()">
+
+         <span class="glyphicon glyphicon-ok " aria-hidden="true" ></span>
+         Save
+         </a>
+    </div>
+   <br>
+   </br>
+
+    <div class ="form-group">
+  
+      <a href="#/" type="button" class="btn btn-danger btn-lng btn-block pull-left">
+
+         <span class="glyphicon glyphicon-remove " aria-hidden="true" ></span>
+         Cancel
+         </a>
+    </div>
+    
+     
+    
+  </form>
+
+  {{rp}}
+ 
+   </div>
+   
+</div>

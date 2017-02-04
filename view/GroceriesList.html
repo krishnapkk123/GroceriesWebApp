@@ -1,0 +1,57 @@
+		
+
+		<div class="col-xs-12">
+			 <a href="#/addItem" type="button" class="btn btn-primary btn-lng btn-block">
+ 		 		<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                Add Items
+ 		 		</a><br></br>
+ 		 		
+ 		 		<div>
+ 		 	<ul class="list-group">
+    
+ 		 	<li ng-repeat ="item in GrocerieItems | orderBy : '-id'	" class="list-group-item text-center clearfix" >
+ 		 	
+
+ 		 	<button type="button" class="btn btn-sm btn-info pull-left">
+ 		 		<span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>
+ 		 	</button>
+ 
+
+ 		 		<span  	ng-class ="{strike|item.completed}"  style="font-weight: bold;">{{item.itemName | uppercase}}</span>
+ 		 		
+ 		 	
+ 		 	<button type="button" class="btn btn-space btn-sm btn-danger pull-right " ng-click ="removeItem(item)">
+ 		 		<span class="glyphicon glyphicon-trash" ></span>
+ 		 </button>
+ 		 	
+
+            
+ 		 	<a href="#/addItem/edit/{{item.id}}" type="button" class="btn btn-space btn-sm btn-default pull-right">
+ 		 		<span class="glyphicon glyphicon-pencil" ></span>
+ 		 	</a>
+
+
+<style type="text/css">.btn-space {
+    margin-right: 5px;
+}
+
+.strike{
+
+	position: relative;	
+}
+.strikeafter{
+	border-bottom: 1px solid black;
+	content: "";
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 40%
+}
+
+</style>
+
+
+ 		 		</li>
+ 		 	</ul>
+ 		 	</div>
+ 		 </div>
